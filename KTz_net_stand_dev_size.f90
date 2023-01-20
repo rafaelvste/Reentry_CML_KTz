@@ -205,9 +205,7 @@
         
         ! Declaration of variables:
         integer :: L_max, L_side, N_cells
-        real(kind=8) :: sigma_x, tic, toc
-
-        call cpu_time(tic)
+        real(kind=8) :: sigma_x
         
         ! Network parameters:
         L_max = 40
@@ -225,10 +223,6 @@
 
         ! Close output files:
         close(unit=10)
-
-        call cpu_time(toc)
-
-        print*, toc-tic
         
         ! Gnuplot script
         ! Plot the standard deviation against size L:
